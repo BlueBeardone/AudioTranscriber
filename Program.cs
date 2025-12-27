@@ -4,18 +4,23 @@ using System.Net.Http.Headers;
 using System.IO;
 using System.Threading.Tasks;
 using System.Text.Json;
+using DotNetEnv;
 
 namespace WhisperTranscriber;
 
 class Program
 {
-    private static readonly string apiKey = Environment.GetEnvironmentVariable("API-KEY");
+    //private static readonly string apiKey = Environment.GetEnvironmentVariable("API-KEY");
 
     private static readonly HttpClient client = new HttpClient();
 
     static async Task Main(string[] args)
     {
+        Env.Load(); 
+
         Console.WriteLine("=== Whisper Audio Transcriber ===");
+
+        string apiKey = Environment.GetEnvironmentVariable("API-KEY");
 
         if (string.IsNullOrEmpty(apiKey))
         {
@@ -58,7 +63,16 @@ class Program
         var fileContent = new StreamContent(fileStream);
         fileContent.Headers.ContentType = new MediaTypeHeaderValue("audio/mpeg");
         form.Add(fileContent, "file", Path.GetFileName(filePath));
-        form.Add(new StringContent("whisper-1"), "model");
+        
+
+        string model = Environment.GetEnvironmentVariable("WHISPER_MODEL") ?? "whisper-1";
+        form.Add(new StringContent(model), "model");
+
+        string language = Environment.GetEnvironmentVariable("TRANSCRIPTION_LANGUAGE") ?? "en";
+        if (!string.IsNullOrEmpty(language))
+        {
+            form.Add(new StringContent(language), "language");
+        }
 
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
@@ -66,12 +80,13 @@ class Program
 
         if (!response.IsSuccessStatusCode)
         {
-            throw new Exception($"API request failed with status code {response.StatusCode}");
+            string errorContent = await response.Content.ReadAsStringAsync();
+            throw new HttpRequestException($"API request failed with status code {response.StatusCode}: {errorContent}");
         }
 
-        var jsonResponse = await response.Content.ReadAsStringAsync();
-        using var document = JsonDocument.Parse(jsonResponse);
-        return document.RootElement.GetProperty("text").GetString();
+        var responseContent = await response.Content.ReadAsStringAsync();
+        using var jsonDoc = JsonDocument.Parse(responseContent);
+        return jsonDoc.RootElement.GetProperty("text").GetString();
     }
 
 }
