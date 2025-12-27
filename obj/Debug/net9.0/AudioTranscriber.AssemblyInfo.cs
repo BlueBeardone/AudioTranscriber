@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AudioTranscriber")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+486124d14a49d186741a3ff15e0e3a2c64dbe65c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+013b66fbf2c01291a8db27cfa5ba25b8ba051c9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("AudioTranscriber")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AudioTranscriber")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

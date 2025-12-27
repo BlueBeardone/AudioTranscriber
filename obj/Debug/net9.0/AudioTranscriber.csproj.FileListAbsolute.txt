@@ -3,3 +3,13 @@ D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscri
 D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.AssemblyInfo.cs
 D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.csproj.CoreCompileInputs.cache
 D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.sourcelink.json
+D:\Making Games\AudioTranscriber\AudioTranscriber\bin\Debug\net9.0\AudioTranscriber.exe
+D:\Making Games\AudioTranscriber\AudioTranscriber\bin\Debug\net9.0\AudioTranscriber.deps.json
+D:\Making Games\AudioTranscriber\AudioTranscriber\bin\Debug\net9.0\AudioTranscriber.runtimeconfig.json
+D:\Making Games\AudioTranscriber\AudioTranscriber\bin\Debug\net9.0\AudioTranscriber.dll
+D:\Making Games\AudioTranscriber\AudioTranscriber\bin\Debug\net9.0\AudioTranscriber.pdb
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.dll
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\refint\AudioTranscriber.dll
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.pdb
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.genruntimeconfig.cache
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\ref\AudioTranscriber.dll
