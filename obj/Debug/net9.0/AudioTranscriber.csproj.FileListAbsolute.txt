@@ -1,0 +1,5 @@
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.GeneratedMSBuildEditorConfig.editorconfig
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.AssemblyInfoInputs.cache
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.AssemblyInfo.cs
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.csproj.CoreCompileInputs.cache
+D:\Making Games\AudioTranscriber\AudioTranscriber\obj\Debug\net9.0\AudioTranscriber.sourcelink.json

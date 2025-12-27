@@ -9,7 +9,7 @@ namespace WhisperTranscriber;
 
 class Program
 {
-    private static readonly string apiKey = Environment.GetEnvironmentVariable("API-KEY") || "";
+    private static readonly string apiKey = Environment.GetEnvironmentVariable("API-KEY");
 
     private static readonly HttpClient client = new HttpClient();
 
